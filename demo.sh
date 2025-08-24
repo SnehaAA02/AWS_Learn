@@ -9,11 +9,13 @@
 # AWS s3
 # AWS EC2
 # AWS IAM Users
+############################
 
 set -x
 
 aws s3 ls
 
 aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+
 
 aws iam list-users
